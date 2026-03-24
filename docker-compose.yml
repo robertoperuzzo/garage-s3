@@ -27,6 +27,6 @@ services:
       - "3902:3902"
       - "3903:3903"
     volumes:
-      - ./garage.toml:/etc/garage.toml
+      - ./${GARAGE_CONFIG_FILE:-garage.toml}:/etc/garage.toml
       - ./meta:/var/lib/garage/meta
       - ./data:/var/lib/garage/data
