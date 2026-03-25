@@ -1,4 +1,10 @@
-data/
-meta/
-/garage.toml
+/data/
+!/data/.gitkeep
+/meta/
+!/meta/.gitkeep
 
+# Ignore environment variables file
+/.env
+
+# Ignore VSCode settings
+.vscode/
