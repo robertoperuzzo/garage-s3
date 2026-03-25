@@ -5,7 +5,7 @@ replication_factor = 1
 
 rpc_bind_addr = "0.0.0.0:3901"
 rpc_public_addr = "127.0.0.1:3901"
-rpc_secret = "${GARAGE_RPC_SECRET}"
+rpc_secret = "paste_your_rpc_secret_here"
 
 [s3_api]
 s3_region = "garage"
@@ -22,5 +22,5 @@ api_bind_addr = "0.0.0.0:3904"
 
 [admin]
 api_bind_addr = "0.0.0.0:3903"
-admin_token = "${GARAGE_RPC_SECRET}"
-metrics_token = "${GARAGE_METRIX_TOKEN}"
+admin_token = "paste_your_admin_token_here"
+metrics_token = "paste_your_metrix_token_here"
