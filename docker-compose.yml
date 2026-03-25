@@ -2,7 +2,7 @@ services:
 
   garage:
     image: dxflrs/garage:${GARAGE_VERSION:-latest}
-    # network_mode: "host"
+    container_name: garage
     restart: unless-stopped
     environment:
       - GARAGE_ADMIN_TOKEN=${GARAGE_ADMIN_TOKEN}
@@ -15,3 +15,15 @@ services:
       - ./${GARAGE_CONFIG_FILE:-garage.toml}:/etc/garage.toml
       - ./meta:/var/lib/garage/meta
       - ./data:/var/lib/garage/data
+
+  webui:
+    image: khairul169/garage-webui:${GARAGE_WEBUI_VERSION:-latest}
+    container_name: garage-webui
+    restart: unless-stopped
+    volumes:
+      - ./${GARAGE_CONFIG_FILE:-garage.toml}:/etc/garage.toml:ro
+    ports:
+      - 3909:3909
+    environment:
+      API_BASE_URL: "http://garage:3903"
+      S3_ENDPOINT_URL: "http://garage:3900"
