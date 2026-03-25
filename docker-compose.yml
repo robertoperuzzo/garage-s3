@@ -6,8 +6,6 @@ services:
     restart: unless-stopped
     environment:
       - GARAGE_ADMIN_TOKEN=${GARAGE_ADMIN_TOKEN}
-      - GARAGE_RPC_SECRET=${GARAGE_RPC_SECRET}
-      - GARAGE_METRIX_TOKEN=${GARAGE_METRIX_TOKEN}
     ports:
       - "3900:3900"
       - "3901:3901"
