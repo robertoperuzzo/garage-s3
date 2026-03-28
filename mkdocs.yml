@@ -1,0 +1,5 @@
+site_name: Garage S3 Homelab Docs
+repo_url: https://github.com/robertoperuzzo/garage-s3
+nav:
+  - Home: index.md
+  - Single Node Setup: single-node.md

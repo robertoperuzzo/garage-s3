@@ -5,5 +5,6 @@
 /.env
 /garage.toml
 
-# Ignore VSCode settings
+# Ignore IDE settings
 .vscode/
+.idea/
